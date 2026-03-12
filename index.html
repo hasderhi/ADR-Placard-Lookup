@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="/media/favicon.ico">
+    <link rel="stylesheet" href="styles.css">
+    <title>ADR Placard Lookup</title>
+</head>
+<body>
+    <h1>ADR Placard Lookup</h1>
+
+    <div class="main-container">
+        <div class="controls-sidebar">
+            <div class="adr-controls">
+                <h3>Select Placards</h3>
+                <input type="text" id="placard-search" placeholder="Search placards...">
+                <div class="placard-list" id="placard-list"></div>
+                <button id="show-all">Show All</button>
+                <button id="hide-all">Hide All</button>
+            </div>
+        </div>
+
+        <div class="content-area">
+            <div class="un-number-and-info">
+                <div class="un-number-controls">
+                    <h3>Edit UN Numbers</h3>
+                    <div>
+                        <label for="un-number-top">Top Number:</label>
+                        <input type="text" id="un-number-top" value="33" maxlength="4">
+                    </div>
+                    <div>
+                        <label for="un-number-bottom">Bottom Number:</label>
+                        <input type="text" id="un-number-bottom" value="1203" maxlength="6">
+                    </div>
+                </div>
+
+                <div class="chemical-info">
+                    <h3>Chemical Information</h3>
+                    <div id="chemical-name">-</div>
+                    <div id="chemical-spec">-</div>
+                    <div id="chemical-hazard-class">-</div>
+                </div>
+            </div>
+
+            <div class="placard-and-symbols">
+                <div class="adr-placard-container">
+                    <span class="adr-number-top" id="adr-number-top"></span>
+                    <div class="adr-separator"></div>
+                    <span class="adr-number-bottom" id="adr-number-bottom"></span>
+                </div>
+                <div class="adr-symbols-container">
+                    <img src="img\adr\1-1.gif" alt="Class 1.1 (Explosive)">
+                    <img src="img\adr\1-2.gif" alt="Class 1.2 (Explosive)">
+                    <img src="img\adr\1-3.gif" alt="Class 1.3 (Explosive)">
+                    <img src="img\adr\1-4.gif" alt="Class 1.4 (Explosive)">
+                    <img src="img\adr\1-5.gif" alt="Class 1.5 (Explosive)">
+                    <img src="img\adr\1-6.gif" alt="Class 1.6 (Explosive)">
+
+                    <img src="img\adr\2.gif" alt="Class 2.1 (Flammable Gas)">
+                    <img src="img\adr\2-pressure.gif" alt="Class 2.2 (Non-Flammable Gas)">
+                    <img src="img\adr\2-toxic.png" alt="Class 2.3 (Toxic Gas)">
+
+                    <img src="img\adr\3.gif" alt="Class 3 (Flammable Liquid)">
+
+                    <img src="img\adr\4-1.png" alt="Class 4.1 (Solid Flammable)">
+                    <img src="img\adr\4-2.png" alt="Class 4.2 (Solid Spontaneously Combustible)">
+                    <img src="img\adr\4-3.gif" alt="Class 4.3 (Solid Combustible in Contact with Water)">
+
+                    <img src="img\adr\5-1.gif" alt="Class 5.1 (Oxidizing Agent)">
+                    <img src="img\adr\5-2.gif" alt="Class 5.2 (Organic Peroxide)">
+
+                    <img src="img/adr-legacy/5-2-organic-peroxide.png" alt="Class 5.2 Outdated (Organic Peroxide)">
+                    <img src="img/adr-legacy/6-harmful.png" alt="Class 6.1b Outdated (Harmful to Humans and Animals)">
+
+                    <img src="img\adr\6.png" alt="Class 6.1 (Toxic Substance)">
+                    <img src="img\adr\6-bio.png" alt="Class 6.2 (Infectious substances)">
+                    
+                    <img src="img/adr/7A.png" alt="Class 7X (Extremely Low Radiation - Depends on dose)">
+                    <img src="img/adr/7B.png" alt="Class 7X (Low Radiation - Depends on dose)">
+                    <img src="img/adr/7B.png" alt="Class 7X (Higher Radiation - Depends on dose)">
+                    <img src="img/adr/7E.png" alt="Class 7E (Fissile Material - Depends on dose)">
+
+                    <img src="img\adr\8.png" alt="Class 8 (Corrosive)">
+
+                    <img src="img\adr\9.png" alt="Class 9 (Miscellaneous dangerous materials)">
+                    <img src="img\adr\9-batteries.png" alt="Class 9A (Lithium-Ion batteries)">
+
+                    <img src="img/transport/environment.png" alt="Class 0.0 (Environmental polluting material)">
+                    <img src="img/transport/hot.png" alt="High Temperature">
+                    <img src="img/transport/limited_quantities_air.png" alt="Limited quantities (Air Cargo)">
+                    <img src="img/transport/limited_quantities_surface.png" alt="Limited quantities (Other Cargo)">
+                </div>
+            </div>
+
+            <div class="ghs-symbols-container">
+                <img src="img/ghs/danger.gif" alt="Warning General Hazard">
+                <img src="img/ghs/acid.gif" alt="Warning Acidic Hazard">
+                <img src="img/ghs/environment.gif" alt="Warning Environmental Hazard">
+                <img src="img/ghs/explosive.gif" alt="Warning Explosive Hazard">
+                <img src="img/ghs/fire.gif" alt="Warning Fire Hazard">
+                <img src="img/ghs/harmful.gif" alt="Warning Health Hazard">
+                <img src="img/ghs/oxidizing.gif" alt="Warning Oxidizing Hazard">
+                <img src="img/ghs/pressure.gif" alt="Warning Pressured Gas Hazard">
+                <img src="img/ghs/toxic.gif" alt="Warning Toxic Hazard">
+            </div>
+
+            <div class="gefahrenzeichen-symbols-container">
+                <img src="img/gefahrsymbole/harmful.png" alt="Warning Health Hazard - Outdated">
+                <img src="img/gefahrsymbole/acid.png" alt="Warning Acidic Hazard - Outdated">
+                <img src="img/gefahrsymbole/environment.png" alt="Warning Environmental Hazard - Outdated">
+                <img src="img/gefahrsymbole/explosive.png" alt="Warning Explosive Hazard - Outdated">
+                <img src="img/gefahrsymbole/flammable.png" alt="Warning Fire Hazard - Outdated">
+                <img src="img/gefahrsymbole/oxidizing.png" alt="Warning Oxidizing Hazard - Outdated">
+                <img src="img/gefahrsymbole/toxic.png" alt="Warning Toxic Hazard - Outdated">
+            </div>
+
+            <div class="warning-symbols-container">
+                <img src="img/signs/warning/warn.png" alt="Warning General Hazard - Triangle">
+                <img src="img/signs/warning/acid.png" alt="Warning Acidic Hazard - Triangle">
+                <img src="img/signs/warning/biohazard.png" alt="Warning Biological Hazard - Triangle">
+                <img src="img/signs/warning/explosive.png" alt="Warning Explosive Hazard - Triangle">
+                <img src="img/signs/warning/fire.png" alt="Warning Fire Hazard - Triangle">
+                <img src="img/signs/warning/health_risk.png" alt="Warning Health Hazard - Triangle">
+                <img src="img/signs/warning/oxidizing.png" alt="Warning Oxidizing Hazard - Triangle">
+                <img src="img/signs/warning/radioactive.png" alt="Warning Radioactive Hazard - Triangle">
+                <img src="img/signs/warning/toxic.png" alt="Warning Toxic Hazard - Triangle">
+            </div>
+
+
+
+            <div class="prohibited-symbols-container">
+                <img src="img/signs/prohibited/do_not_extinguish_with_water.png" alt="Extinguishing with Water Prohibited Sign">
+                <img src="img/signs/prohibited/no_fire.png" alt="Naked Fire Prohibited Sign">
+            </div>
+        </div>
+    </div>
+    <div id="disclaimer-modal" class="modal">
+        <div class="modal-content">
+            <img src="media/favicon.ico" alt="ADR Placard Lookup Table Logo" height="100px">
+            <h2>IMPORTANT DISCLAIMER</h2>
+            <p>
+                This tool is for <strong>educational/hobby use only</strong>.
+                I am <strong>not qualified</strong> to advise on ADR or hazardous materials.
+                The database may contain errors - <strong>do not use this for real-world applications</strong>.
+                I am <strong>not liable</strong> for any misuse or damages.
+                Always consult a qualified professional.
+                <br>
+                Please read the <a href="DISCLAIMER.html" target="_blank">Full Disclaimer</a> and <a href="LICENSE.html" target="_blank">License</a> for more information.
+            </p>
+            <button id="accept-btn">I Understand (Proceed)</button>
+        </div>
+    </div>
+
+    <footer>
+        <p>
+            <strong>DISCLAIMER:</strong>
+            This tool is for educational use only. Not for professional ADR compliance.
+            <a href="DISCLAIMER.html" target="_blank">Read full disclaimer</a>.<br><br>
+            <strong>ADR Data Source: Bundesanstalt für Materialforschung und -prüfung (BAM) – Datenbank GEFAHRGUT – URL: <a href="https://tes.bam.de/TES/Navigation/EN/DGG-Database/dgg-database.html" target="_blank">https://tes.bam.de/TES/Navigation/EN/DGG-Database/dgg-database.html</a></strong><br>
+            <strong>LICENSE: "Data licence Germany – attribution – Version 2.0" <a href="https://govdata.de/dl-de/by-2-0" target="_blank">www.govdata.de/dl-de/by-2-0</a></strong><br><br>
+
+            <strong>Symbol Sources:</strong><br>
+            <i>ADR placards:</i> based on UN Model Regulations.<br>
+            <i>GHS pictograms:</i> based on UN GHS standards.<br>
+            <i>Gefahrensymbole:</i> Historical German hazard symbols.<br>
+            <i>Yellow Triangle Signs:</i> Generic warning signs for illustrative purposes.<br><br>
+
+            <strong>Copyright (c) 2026 Annabeth Kisling. All rights reserved.</strong><br>
+            This website is solely for information about my open-source development.<br>
+            There are no Cookies used and no personal data is collected.<br>
+            <a href="https://tk-dev-software.com/legal" target="_blank">Further Legal Notice</a><br><br>
+
+            <strong>Check out my...</strong><br>
+            <a href="https://tk-dev-software.com" target="_blank">Main Site</a><br>
+            <a href="https://github.com/hasderhi" target="_blank">GitHub</a>
+        </p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
