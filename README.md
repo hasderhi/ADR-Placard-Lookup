@@ -14,7 +14,7 @@ By using this tool, you agree to these terms.
 
 ## Introduction
 
-Ever since I was in Kindergarden age, I had this strange obsession with traffic signs, symbols and - especially - these ADR placards that are often mounted on trucks. Every time we drove on the highway, my parents had to research what chemical hid behind that number on the orange placard.
+Ever since I was in kindergarden age, I had this strange obsession with traffic signs, symbols and - especially - these ADR placards that are often mounted on trucks. Every time we drove on the highway, my parents had to research what chemical hid behind that number on the orange placard.
 
 Recently, I was looking for a big dataset to practice data extraction with `pandas`. When I discovered this giant ADR dataset by *BAM*, my childhood obsession came back and I knew I had to do something with it.
 
@@ -80,9 +80,9 @@ The hazard classes defined by UN/ADR are:
   - Limited quantities (Air Cargo)
   - Limited quantities (Other Cargo)
 
-★ These classes and their respective symbols are outdated and only included for reference. They have been replaced by other classes.
+#### ★ These classes and their respective symbols are outdated and only included for reference. They have been replaced by other classes.
 
-★★ Transport Symbols are part of the UN/ADR definition, but aren't part of the class system. Technically, the "Environmentally polluting material" placard could be applied to *some* of the Class 9 substances, but it's difficult to acquire that data from my source. Therefore, this and the other "Transport" placards must be selected manually from the menu.
+#### ★★ Transport Symbols are part of the UN/ADR definition, but aren't part of the class system. Technically, the "Environmentally polluting material" placard could be applied to *some* of the Class 9 substances, but it's difficult to acquire that data from my source. Therefore, this and the other "Transport" placards must be selected manually from the menu.
 
 ### Interpreting the Data and Displaying the Placards
 
@@ -100,6 +100,10 @@ The appearance of these additional symbols is dependent on which ADR placards ar
 ## How to use
 
 **Like mentioned above: DO NOT USE THIS FOR REAL-WORLD APPLICATIONS.**
+
+### Website
+
+You can find the lookup table on my website, [https://tk-dev-software.com/projects/adr-placards/](https://tk-dev-software.com/projects/adr-placards/).
 
 ### Using the Lookup
 
